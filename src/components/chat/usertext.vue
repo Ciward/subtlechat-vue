@@ -48,7 +48,7 @@ export default {
       if (this.currentSession.username=="小智"){
         msgObj.fromNickname=this.$store.state.currentUser.nickname;
         msgObj.to='小智';
-        this.$store.state.stomp.send("/ws/robotChat",{},JSON.stringify(msgObj));
+        this.$store.state.stomp.send("/ws/RAGchat",{},JSON.stringify(msgObj));
         //保存该条记录到session
         this.$store.commit('addMessage',msgObj);
       }
