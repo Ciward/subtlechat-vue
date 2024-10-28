@@ -1,11 +1,11 @@
 let proxyObj={};
 proxyObj['/ws']={
   ws:true,
-  target:"ws://localhost:8082"
+  target:"ws://10.102.33.6:8082"
 };
 proxyObj['/']={
   ws:false,
-  target:'http://localhost:8082',
+  target:'http://10.102.33.6:8082',
   changeOrigin: true,
   pathRewrite:{
     '^/':''
